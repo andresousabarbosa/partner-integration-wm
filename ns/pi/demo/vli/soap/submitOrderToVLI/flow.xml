@@ -326,7 +326,7 @@
 </INVOKE>
 </SEQUENCE>
 
-<INVOKE SERVICE="pi.pi.xml.validation:validateOrderXMLPayload">
+<INVOKE SERVICE="pi.xml.validation.validation:validateOrderXMLPayload">
 
   <!-- nodes -->
 
