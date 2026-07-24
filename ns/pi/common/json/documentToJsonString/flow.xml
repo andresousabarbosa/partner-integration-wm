@@ -714,6 +714,9 @@
 
 <MAPDELETE FIELD="/jsonObj;1;0">
 </MAPDELETE>
+
+<MAPDELETE FIELD="/document;2;0">
+</MAPDELETE>
 </MAP>
 </INVOKE>
 </FLOW>
