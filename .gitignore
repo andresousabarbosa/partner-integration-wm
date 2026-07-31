@@ -1,0 +1,6 @@
+*.cnf
+*.dat
+*.DS_Store
+assets.json
+/*.classpath
+/code/classes

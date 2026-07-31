@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">CloudConnectionNode</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">pi.azure.conn:connAzureStorage</value>
+  <value name="node_pkg">PartnerIntegration</value>
+  <value name="is_public">false</value>
+  <value name="cloudNodeVersion">1</value>
+  <record name="cloudNodeProperties" javaclass="com.wm.util.Values">
+    <number name="connectionNodeVersion" type="Integer">1</number>
+    <value name="connectorID">com.softwareag.cloudstreams.ms.azure.storage_v20191212</value>
+    <value name="providerName">WmMicrosoftAzureStorageProvider</value>
+    <value name="providerConnectionType">sagcloud</value>
+    <record name="connectionGroupProperties" javaclass="com.wm.util.Values">
+      <value name="cn.providerUrl">https://storageintwm000.blob.core.windows.net</value>
+      <value name="cn.connectTimeout">30000</value>
+      <value name="cn.readTimeout">30000</value>
+      <value name="cn.socketStaleCheck">true</value>
+      <value name="cn.validateAfterInactivity">1000</value>
+      <value name="cn.retryCount">4</value>
+      <value name="cn.retryIfRequestSentOk">true</value>
+      <value name="cn.tcpNoDelay">false</value>
+      <value name="cn.socketLinger">-1</value>
+      <value name="cn.sockBuffSize">8192</value>
+      <value name="cn.reuseAddr">false</value>
+      <value name="cn.webproxyAlias"></value>
+      <value name="cn.truststoreAlias"></value>
+      <value name="cn.keystoreAlias"></value>
+      <value name="cn.clientKeyAlias"></value>
+      <value name="cn.hostnameVerifier">org.apache.http.conn.ssl.DefaultHostnameVerifier</value>
+      <value name="cn.keepAliveInterval">-1</value>
+      <value name="cn.idleTimeout">-1</value>
+      <value name="cn.enableCompression">false</value>
+      <value name="cn.enableSNI">true</value>
+      <value name="cn.sniServerName">storageintwm000.blob.core.windows.net</value>
+      <value name="cx.token">pi.azure.conn:connAzureStorage.cx.token</value>
+    </record>
+    <array name="passmanHandles" type="value" depth="1">
+      <value>pi.azure.conn:connAzureStorage.cx.token</value>
+    </array>
+    <record name="connectionManagerProperties" javaclass="com.wm.util.Values">
+      <value name="poolable">false</value>
+      <value name="startupRetryCount">0</value>
+      <value name="startupBackoffSecs">10</value>
+      <value name="timeoutType">none</value>
+    </record>
+    <array name="formattableFields" type="value" depth="1">
+    </array>
+    <value name="connectionEnabled">true</value>
+  </record>
+</Values>
