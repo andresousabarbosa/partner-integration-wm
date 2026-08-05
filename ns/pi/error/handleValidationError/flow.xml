@@ -793,9 +793,6 @@
 
   <!-- nodes -->
 
-<MAPDELETE FIELD="/correlationId;1;0">
-</MAPDELETE>
-
 <MAPDELETE FIELD="/errorCode;1;0">
 </MAPDELETE>
 
