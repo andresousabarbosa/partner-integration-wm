@@ -1,0 +1,66 @@
+interface pi.common.variable
+service getPulsarConsumerValues (
+    output {
+        String serviceUrl;
+        String topic;
+        String subscriptionName;
+        String maxMessages;
+        String timeoutMs;
+    }
+)
+properties {
+    favorite: false;
+    deprecated: false;
+    visible: private;
+    reuse: private;
+    stateless: true;
+    cacheResults: false;
+    cacheExpire: 15;
+    prefetch: false;
+    prefetchActivation: 1;
+    pipelineDebug: None;
+    allowedHttpMethods: [TRACE, HEAD, DELETE, POST, GET, OPTIONS, PUT, PATCH];
+    maxRetryAttempts: 0;
+    retryInterval: 0;
+    enableAuditing: never;
+    logOn: Error only;
+    includePipeline: never;
+    circuitBreakerEnabled: false;
+    failureEvent: Exception only;
+    timeoutPeriod: 60;
+    cancelThreadOnTimeout: false;
+    failureThreshold: 5;
+    failurePeriod: 60;
+    circuitOpenAction: Throw exception;
+    circuitResetPeriod: 300;
+    concurrencyEnabled: false;
+    maxConcurrentRequests: 20;
+    validateInput: false;
+    validateOutput: false;
+}
+{
+    MAP {
+        comment: "Captura a definicao do ambiente"
+        mapTarget {
+            String env;
+        }
+        set (globalvariables) `env` = "%pulsar.env%";
+    }
+    IF (env <> 'local') {
+        MAP {
+            comment: "Se for diferente de local set os valores"
+            mapTarget {
+                String topic;
+                String serviceUrl;
+                String subscriptionName;
+                String maxMessages;
+                String timeoutMs;
+            }
+            set (globalvariables) `topic` = "%pulsar.topic%";
+            set (globalvariables) `serviceUrl` = "%pulsar.serviceUrl%";
+            set (globalvariables) `subscriptionName` = "%pulsar.subscriptionName%";
+            set (globalvariables) `maxMessages` = "%pulsar.maxMessages%";
+            set (globalvariables) `timeoutMs` = "%pulsar.timeoutMs%";
+        }
+    }
+}
