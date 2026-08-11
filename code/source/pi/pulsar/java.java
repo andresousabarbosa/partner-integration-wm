@@ -41,6 +41,15 @@ public final class java
 	{
 		// --- <<IS-START(consumeFromPulsar)>> ---
 		// @sigtype java 3.5
+		// [i] field:0:required serviceUrl
+		// [i] field:0:required topic
+		// [i] field:0:required subscriptionName
+		// [i] field:0:required maxMessages
+		// [i] field:0:required timeoutMs
+		// [o] field:0:required status
+		// [o] field:0:required statusMessage
+		// [o] field:0:required totalConsumed
+		// [o] field:1:required messages
 		IDataCursor c = pipeline.getCursor();
 		    String serviceUrl       = IDataUtil.getString(c, "serviceUrl");
 		    String topic            = IDataUtil.getString(c, "topic");
