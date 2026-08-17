@@ -46,7 +46,7 @@ properties {
         }
         set (globalvariables) `env` = "%pulsar.env%";
     }
-    IF (env <> 'local') {
+    IF (env!="local") {
         MAP {
             comment: "Se for diferente de local set os valores"
             mapTarget {
